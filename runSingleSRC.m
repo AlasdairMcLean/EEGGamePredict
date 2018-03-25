@@ -5,13 +5,13 @@ feature2run='muSqTemporalContrast';
 % ALASDAIR: change the path below to wherever you put the data on your
 % machine
 
-readyDataFilename='/Users/jacekdmochowski/Dropbox/stim2eeg/sample ARL data/013/play/11_28_17_01_ready_data';  
+%readyDataFilename='/sample ARL data/013/play/11_28_17_01_ready_data';  
 % playing the game
 
-%readyDataFilename='/Users/jacekdmochowski/Dropbox/stim2eeg/sample ARL data/013/bci/11_28_17_01_ready_data'; 
+%readyDataFilename='/sample ARL data/013/bci/11_28_17_01_ready_data'; 
 % mock bci
 
-%readyDataFilename='/Users/jacekdmochowski/Dropbox/stim2eeg/sample ARL data/013/watch/11_28_17_01_ready_data'; 
+readyDataFilename='/sample ARL data/013/watch/11_28_17_01_ready_data'; 
 % watching the game
 
 fs=30; % sampling rate
