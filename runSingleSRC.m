@@ -5,13 +5,13 @@ feature2run='muSqTemporalContrast';
 % ALASDAIR: change the path below to wherever you put the data on your
 % machine
 
-%readyDataFilename='/sample ARL data/013/play/11_28_17_01_ready_data';  
+%readyDataFilename='sample ARL data/013/play/11_28_17_01_ready_data';  
 % playing the game
 
-%readyDataFilename='/sample ARL data/013/bci/11_28_17_01_ready_data'; 
+%readyDataFilename='sample ARL data/013/bci/11_28_17_01_ready_data'; 
 % mock bci
 
-readyDataFilename='/sample ARL data/013/watch/11_28_17_01_ready_data'; 
+readyDataFilename='sample ARL data/013/watch/11_28_17_01_ready_data'; 
 % watching the game
 
 fs=30; % sampling rate
@@ -32,7 +32,7 @@ stim=zscore(stim);
 % make a convolution matrix for temporally filtering the stimulus
 % ALASDAIR: take a look at the tplitz function carefully; this is what you
 % will have to edit (or make your own, non-causal version)
-stim_tpl=tplitz(stim,K);
+stim_tpl=tplitzhankel(stim,K,1);
 
 % correlate the EEG with the stimulus (canonical correlation analysis)
 [A,B,rhos,~,~,~,Rxx,Ryy] = myCanonCorr(stim_tpl,eeg,Kx,Ky);
