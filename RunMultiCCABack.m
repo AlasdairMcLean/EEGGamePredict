@@ -46,7 +46,7 @@ figure;
 plot(Ks/fs:Ki/fs:Ke/fs,top3rhos(:,1),Ks/fs:Ki/fs:Ke/fs,top3rhos(:,2),Ks/fs:Ki/fs:Ke/fs,top3rhos(:,3));
 xlabel('Length of temporal window (s)');
 ylabel('rho vals')
-title('? as a function of backwards temporal window');
+title('rhos as a function of backwards temporal window');
 %for c=1:nComp
 %    subplot(1,nComp,c);
 %    topoplot(forwards(:,c),'JBhead96_sym.loc');
