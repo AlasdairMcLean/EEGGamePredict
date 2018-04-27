@@ -32,7 +32,7 @@ stim=zscore(stim);
 % make a convolution matrix for temporally filtering the stimulus
 % ALASDAIR: take a look at the tplitz function carefully; this is what you
 % will have to edit (or make your own, non-causal version)
-stim_tpl=tplitzhankel(stim,K,1);
+stim_tpl=tplitz(stim,K);
 
 % correlate the EEG with the stimulus (canonical correlation analysis)
 [A,B,rhos,~,~,~,Rxx,Ryy] = myCanonCorr(stim_tpl,eeg,Kx,Ky);
