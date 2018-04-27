@@ -5,7 +5,7 @@ feature2run='muSqTemporalContrast';
 
 %If cloning from github: Leave the following path and data will load; if
 %data is elsewhere, modify to local path
-readyDataFilename='sample ARL data/013/watch/11_28_17_01_ready_data'; 
+readyDataFilename='sample ARL data/013/watch/11_28_17_02_ready_data'; 
 
 fs=30; % sampling rate
 nComp=5; % number of components to DISPLAY (all are analyzed)
@@ -14,7 +14,7 @@ Kx=20; % regularization parameter on the stimulus (reduce for higher reg.)
 Ky=20; % regularization parameter on the EEG (reduce for higher reg.)
 
 Ks=fs/2; % Starting temporal window length (0.5s)
-Ke=5*fs; % Ending temporal window length (3s)
+Ke=7*fs; % Ending temporal window length (3s)
 Ki=1; % Temporal window increment (1/30s)
 
 
@@ -46,7 +46,7 @@ figure;
 plot(Ks/fs:Ki/fs:Ke/fs,top3rhos(:,1),Ks/fs:Ki/fs:Ke/fs,top3rhos(:,2),Ks/fs:Ki/fs:Ke/fs,top3rhos(:,3));
 xlabel('Length of temporal window (s)');
 ylabel('rho vals')
-title('Corre
+title('? as a function of backwards temporal window');
 %for c=1:nComp
 %    subplot(1,nComp,c);
 %    topoplot(forwards(:,c),'JBhead96_sym.loc');
