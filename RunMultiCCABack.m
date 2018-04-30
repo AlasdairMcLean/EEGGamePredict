@@ -1,11 +1,13 @@
-clear all; close all; clc
+
+%outdated in favor of MultiCCAPredict, which streamlines the process of running multiple canonical correlation analyses
+
 addpath(genpath('.'));
 feature2run='muSqTemporalContrast';
 
 
 %If cloning from github: Leave the following path and data will load; if
 %data is elsewhere, modify to local path
-readyDataFilename='sample ARL data/013/watch/11_28_17_02_ready_data'; 
+readyDataFilename='sample ARL data/013/play/11_28_17_01_ready_data'; 
 
 fs=30; % sampling rate
 nComp=5; % number of components to DISPLAY (all are analyzed)
