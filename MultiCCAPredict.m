@@ -14,8 +14,6 @@ addpath(genpath('.')); %necessary for accessing the data
 % muSqLocalContrast:    [5290×1 double]
 % stdLocalContrast:     [5290×1 double]
 
-
-
 %If cloning from github: Leave the following path and data will load; if
 %data is elsewhere, modify to local path
 

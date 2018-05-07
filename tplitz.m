@@ -3,8 +3,6 @@ function X=tplitz(x,K)
 % construct block toeplitz matrix
 X=[];
 
-% to understand this function, take the most common case where 'x' is a
-% single column
 for i=1:size(x,2)
     Xtmp=toeplitz(x(:,i));
     uind=find(triu(Xtmp,1));
@@ -26,5 +24,3 @@ end
 
 % add zero-degree coefficient
 X=cat(2,X,ones(size(X,1),1));
-
-return

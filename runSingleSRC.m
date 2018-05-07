@@ -16,7 +16,7 @@ readyDataFilename='sample ARL data/013/watch/11_28_17_01_ready_data';
 
 fs=30; % sampling rate
 nComp=5; % number of components to DISPLAY (all are analyzed)
-K=fs-1; % length of temporal window (1 sec minus 1 sample, in this case)
+K=75; % length of temporal window (1 sec minus 1 sample, in this case)
 Kx=20; % regularization parameter on the stimulus (reduce for higher reg.)
 Ky=20; % regularization parameter on the EEG (reduce for higher reg.)
 
@@ -32,7 +32,7 @@ stim=zscore(stim);
 % make a convolution matrix for temporally filtering the stimulus
 % ALASDAIR: take a look at the tplitz function carefully; this is what you
 % will have to edit (or make your own, non-causal version)
-stim_tpl=tplitz(stim,K);
+stim_tpl=revtplitz(stim,K,K);
 
 % correlate the EEG with the stimulus (canonical correlation analysis)
 [A,B,rhos,~,~,~,Rxx,Ryy] = myCanonCorr(stim_tpl,eeg,Kx,Ky);
@@ -46,5 +46,3 @@ for c=1:nComp
     topoplot(forwards(:,c),'JBhead96_sym.loc');
     title(sprintf('rho=%0.2f',rhos(c)));
 end
-
-
